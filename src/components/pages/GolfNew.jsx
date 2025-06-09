@@ -9,7 +9,7 @@ const AIRTABLE_TABLE_NAME = 'News';
 
 const base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
 
-const NewBoards = () => {
+const GolfNew = () => {
     const [records, setRecords] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -52,4 +52,4 @@ const NewBoards = () => {
   )
 }
 
-export default NewBoards
+export default GolfNew
