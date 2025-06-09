@@ -24,7 +24,7 @@ export const Navbar = () => {
               aria-label="Close"
             ></button>
           </div>
-          <div className="offcanvas-body">
+          {/* <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
@@ -42,7 +42,7 @@ export const Navbar = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>
