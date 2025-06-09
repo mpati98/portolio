@@ -44,7 +44,7 @@ const GolfNew = () => {
 
   return (
     <div>
-        <h2 className="text-center">Latest <span className="badge bg-danger">News</span></h2>
+        <h2 className="text-center">Golf <span className="badge bg-danger">News</span></h2>
         {records.map((news, index) =>{
             return <NewItem key={index} title={news.fields.Title} description = {news.fields.Content} src={news.fields.Cover[0]['url']} url={news.fields.SourceUrl} />
         })}
