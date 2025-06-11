@@ -41,6 +41,10 @@ const TamQuanTrongCuaKyThuatOption = [
 const DangKyLopHocMienPhi = [
          "Làm thế nào để đăng ký học?"
 ]
+const continueMenu = [
+  "Tìm hiểu thêm",
+  "Đăng ký lớp học"
+]
 
 const flow = {
 		start: {
@@ -195,7 +199,7 @@ const flow = {
 				let link = "";
 				switch (params.userInput) {
 				case "Làm thế nào để đăng ký học?":
-					link = "https://react-chatbotify.com/docs/introduction/quickstart/";
+					link = "https://www.lovegolfvn.com/register";
 					break;
 				default:
 					return "unknown_input";
@@ -207,16 +211,31 @@ const flow = {
 				return "repeat"
 			},
 		},
+    TimHieuThem: {
+			options: continueMenu,
+			path: "process_TimHieuThem"
+		},
+    process_TimHieuThem: {
+      transition: {duration: 1000},
+			chatDisabled: true,
+			path: (params) => params.userInput
+		},    
+    "Tìm hiểu thêm":{
+      path: 'startOption'
+    },
+    "Đăng ký lớp học":{
+      path: 'DangKyChoiGolf'
+    },
 		repeat: {
 			transition: {duration: 3000},
 			path: "prompt_again"
 		},
 	}
 
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <>
+  
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(
+    <>
     <ChatBot flow={flow} settings= {settings}/>
     <BrowserRouter>
       <Routes>

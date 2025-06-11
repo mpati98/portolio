@@ -1,14 +1,14 @@
 import { useState } from "react";
+import { LoadingScreen } from "../utils/LoadingScreen";
 import { RevealOnScroll } from "../utils/RevealOnScroll";
 import emailjs from "emailjs-com";
-import { LoadingScreen } from '../utils/LoadingScreen'
 
-const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY
-const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID
-const AIRTABLE_TABLE_NAME = 'Customer'; 
+const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY;
+const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;
+const AIRTABLE_TABLE_NAME = "Customer";
 
 export const RegisterForm = () => {
-    const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,7 +19,7 @@ export const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    console.log(e)
+    console.log(e);
     // Email notification
     emailjs
       .sendForm(
@@ -27,23 +27,23 @@ export const RegisterForm = () => {
         import.meta.env.VITE_TEMPLATE_ID,
         e.target,
         import.meta.env.VITE_PUBLIC_KEY
-    )
-    .then((result) => {
-        console.log(result)
+      )
+      .then((result) => {
+        console.log(result);
         setFormData({ name: "", email: "", phone: "", message: "" });
-    })
-    .catch(() => alert("Oops! Something went wrong. Please try again."));
-    console.log(import.meta.env.VITE_SERVICE_ID)
+      })
+      .catch(() => alert("Oops! Something went wrong. Please try again."));
+    console.log(import.meta.env.VITE_SERVICE_ID);
 
     // Create airtavle record
-        try {
+    try {
       const response = await fetch(
         `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`,
         {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${AIRTABLE_API_KEY}`,
           },
           // The body for creating records expects 'records' as an array
           // and each record object must have a 'fields' property.
@@ -51,10 +51,10 @@ export const RegisterForm = () => {
             records: [
               {
                 fields: {
-                  Name: e.target.name.value, 
-                  Email: e.target.email.value, 
+                  Name: e.target.name.value,
+                  Email: e.target.email.value,
                   Phone: e.target.phone.value,
-                  Message: e.target.message.value
+                  Message: e.target.message.value,
                   // Add other fields as needed, e.g., 'Description': 'Some text'
                 },
               },
@@ -67,29 +67,35 @@ export const RegisterForm = () => {
 
       if (!response.ok) {
         // Airtable API errors usually come with an 'error' object
-        const errorDetail = data.error?.message || 'Unknown error occurred.';
+        const errorDetail = data.error?.message || "Unknown error occurred.";
         throw new Error(`API Error: ${response.status} - ${errorDetail}`);
       }
-
     } catch (error) {
-        console.log(error)
-        alert("Something went wrong!");
-    }finally {
+      console.log(error);
+      alert("Something went wrong!");
+    } finally {
       setLoading(false);
     }
   };
 
   return (
-      <section
+    <section
       id="contact"
       className="min-h-screen flex items-center justify-center py-20"
-      >
-    {!loading && <LoadingScreen onComplete = {() => {setLoading(true)}} />}{" "}
+    >
+      {!loading && (
+        <LoadingScreen
+          onComplete={() => {
+            setLoading(true);
+          }}
+        />
+      )}{" "}
       <RevealOnScroll>
         <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             {" "}
-            Đăng ký <br/>lớp dạy golf miễn phí
+            Đăng ký <br />
+            lớp dạy golf miễn phí
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
