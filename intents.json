@@ -1,0 +1,128 @@
+{
+  "intents": [
+    {
+      "tag": "kien_thuc_chung",
+      "patterns": [
+        "Kiến thức chung về golf",
+        "Golf là gì?",
+        "Mục tiêu của golf là gì?",
+        "Sân golf có bao nhiêu lỗ?",
+        "Par trong golf là gì?",
+        "Điểm số trong golf được tính như thế nào?",
+        "Cần chuẩn bị gì khi ra sân golf?",
+        "Nghi thức trên sân golf"
+      ],
+      "responses": [
+        {
+          "question": "Golf là gì và mục tiêu của trò chơi là gì?",
+          "answer": "Golf là một môn thể thao mà người chơi sử dụng nhiều loại gậy khác nhau để đánh một quả bóng nhỏ vào một loạt các lỗ trên sân trong số lần đánh ít nhất có thể."
+        },
+        {
+          "question": "Một sân golf tiêu chuẩn có bao nhiêu lỗ?",
+          "answer": "Một sân golf tiêu chuẩn thường có 18 lỗ. Tuy nhiên, cũng có những sân 9 lỗ hoặc 36 lỗ."
+        },
+        {
+          "question": "'Par' trong golf có nghĩa là gì?",
+          "answer": "'Par' là số gậy tiêu chuẩn mà một golfer chuyên nghiệp được kỳ vọng sẽ hoàn thành một lỗ hoặc toàn bộ vòng golf. Mỗi lỗ sẽ có par 3, par 4 hoặc par 5 tùy thuộc vào độ dài của nó."
+        },
+        {
+          "question": "Các thuật ngữ điểm số cơ bản trong golf?",
+          "answer": "- **Ace (Hole-in-one):** Đánh bóng vào lỗ chỉ bằng một cú đánh duy nhất.\n- **Eagle:** Dưới par 2 gậy ở một lỗ.\n- **Birdie:** Dưới par 1 gậy ở một lỗ.\n- **Par:** Bằng số gậy tiêu chuẩn.\n- **Bogey:** Vượt par 1 gậy ở một lỗ.\n- **Double Bogey:** Vượt par 2 gậy ở một lỗ."
+        },
+        {
+          "question": "Cần chuẩn bị những gì khi ra sân golf?",
+          "answer": "Bạn sẽ cần một bộ gậy golf (tối đa 14 gậy), bóng golf, tee (dụng cụ đặt bóng), găng tay, giày golf chuyên dụng và trang phục phù hợp với quy định của sân."
+        },
+        {
+          "question": "Nghi thức (etiquette) cơ bản trên sân golf là gì?",
+          "answer": "- **Tôn trọng người chơi khác:** Giữ im lặng khi người khác đang đánh bóng.\n- **Tốc độ chơi:** Duy trì tốc độ chơi phù hợp để không làm ảnh hưởng đến nhóm sau.\n- **Chăm sóc sân:** Cào lại các hố cát, sửa lại các vết bóng trên green.\n- **An toàn:** Luôn đảm bảo không ai đứng quá gần khi bạn vung gậy."
+        }
+      ]
+    },
+    {
+      "tag": "ky_thuat_choi_golf",
+      "patterns": [
+        "Kỹ thuật chơi golf",
+        "Kỹ thuật Swing là gì?",
+        "Các loại cú đánh cơ bản trong golf?",
+        "Cách cầm gậy golf?",
+        "Tư thế đứng đánh golf?"
+      ],
+      "responses": [
+        {
+          "question": "Kỹ thuật Swing (Cú vung gậy) là gì và tại sao nó quan trọng?",
+          "answer": "Swing là chuyển động xoay người để đánh bóng đi xa và chính xác. Đây là kỹ thuật nền tảng và quan trọng nhất trong golf. Một cú swing tốt đòi hỏi sự phối hợp nhịp nhàng của toàn bộ cơ thể từ tay, vai, hông đến chân."
+        },
+        {
+          "question": "Có những loại cú đánh cơ bản nào trong golf?",
+          "answer": "- **Drive:** Cú phát bóng từ tee box, thường dùng gậy driver để đạt khoảng cách xa nhất.\n- **Approach:** Cú đánh tiếp cận green sau cú phát bóng.\n- **Chip:** Cú đánh ngắn, thấp và lăn nhiều khi bóng ở gần green.\n- **Putt:** Cú gạt bóng trên green để đưa bóng vào lỗ."
+        },
+        {
+          "question": "Làm thế nào để cầm gậy (grip) đúng cách?",
+          "answer": "Có ba kiểu cầm gậy chính:\n- **Overlapping Grip (Vardon Grip):** Ngón út của tay phải đè lên kẽ giữa ngón trỏ và ngón giữa của tay trái (đối với người thuận tay phải).\n- **Interlocking Grip:** Ngón út của tay phải và ngón trỏ của tay trái lồng vào nhau.\n- **Baseball Grip (Ten-Finger Grip):** Cầm gậy như cầm một cây gậy bóng chày, tất cả 10 ngón tay đều tiếp xúc với cán gậy."
+        },
+        {
+          "question": "Tư thế đứng (stance) chuẩn bị đánh bóng như thế nào?",
+          "answer": "Một tư thế tốt cần đảm bảo sự cân bằng và ổn định. Hai chân mở rộng bằng vai, đầu gối hơi chùng, lưng giữ tương đối thẳng và nghiêng người về phía trước từ phần hông."
+        }
+      ]
+    },
+    {
+      "tag": "san_golf_viet_nam",
+      "patterns": [
+        "Sân golf ở Việt Nam",
+        "Sân golf miền Bắc",
+        "Sân golf miền Trung",
+        "Sân golf miền Nam"
+      ],
+      "responses": [
+        {
+          "question": "Kể tên một số sân golf hàng đầu ở miền Bắc?",
+          "answer": "- **Sân golf Sky Lake (Hà Nội):** Nổi bật với hai sân 18 lỗ Sky và Lake, mang đến những thử thách đa dạng giữa khung cảnh núi non hùng vĩ.\n- **Vinpearl Golf Hải Phòng:** Tọa lạc trên đảo Vũ Yên, sở hữu thiết kế độc đáo với sân Hồ và sân Đầm lầy.\n- **FLC Ha Long Bay Golf Club (Quảng Ninh):** Có tầm nhìn ngoạn mục bao quát Vịnh Hạ Long."
+        },
+        {
+          "question": "Miền Trung có những sân golf nào đáng chú ý?",
+          "answer": "- **Laguna Lăng Cô Golf Club (Huế):** Được thiết kế bởi Sir Nick Faldo, sân golf mang đến trải nghiệm độc đáo giữa biển và núi.\n- **BRG Da Nang Golf Resort (Đà Nẵng):** Sở hữu hai sân được thiết kế bởi Greg Norman và Jack Nicklaus.\n- **Hoiana Shores Golf Club (Quảng Nam):** Là một sân golf dạng links ven biển tuyệt đẹp."
+        },
+        {
+          "question": "Đâu là những sân golf nổi tiếng ở miền Nam?",
+          "answer": "- **The Bluffs Ho Tram Strip (Bà Rịa - Vũng Tàu):** Được thiết kế bởi huyền thoại Greg Norman, liên tục được xếp hạng trong số những sân golf tốt nhất thế giới.\n- **Sân golf Tân Sơn Nhất (TP.HCM):** Vị trí đắc địa ngay gần sân bay, rất thuận tiện.\n- **Vinpearl Golf Phú Quốc:** Khám phá trải nghiệm chơi golf giữa khu rừng nguyên sinh hoang sơ tại đảo ngọc."
+        }
+      ]
+    },
+    {
+      "tag": "tam_quan_trong_ky_thuat",
+      "patterns": [
+        "Tại sao phải chơi golf đúng kỹ thuật?",
+        "Lợi ích của việc học golf bài bản?",
+        "Tại sao nên học với huấn luyện viên?",
+        "Học golf đúng cách"
+      ],
+      "responses": [
+        {
+          "question": "Tại sao việc chơi golf đúng kỹ thuật lại quan trọng đến vậy?",
+          "answer": "Chơi golf đúng kỹ thuật giúp:\n- **Tối ưu hóa hiệu suất:** Tạo ra những cú đánh mạnh mẽ, ổn định và chính xác.\n- **Phòng tránh chấn thương:** Giảm áp lực lên lưng, vai, khuỷu tay và cổ tay.\n- **Tiết kiệm thời gian và công sức:** Giúp bạn tiến bộ nhanh hơn, tránh phải sửa những lỗi sai đã thành thói quen.\n- **Tăng thêm niềm vui:** Khi kiểm soát được cú đánh và thấy sự tiến bộ, bạn sẽ hứng thú hơn với môn thể thao này."
+        },
+        {
+          "question": "Tại sao tôi nên học với huấn luyện viên chuyên nghiệp thay vì tự tập?",
+          "answer": "Một huấn luyện viên chuyên nghiệp sẽ:\n- **Phân tích và chỉ ra lỗi sai:** Nhanh chóng nhận ra những lỗi sai mà bạn khó có thể nhận thấy.\n- **Xây dựng lộ trình học cá nhân hóa:** Thiết kế chương trình tập luyện phù hợp với thể trạng và khả năng của bạn.\n- **Cung cấp kiến thức nền tảng vững chắc:** Dạy bạn bài bản về luật chơi, chiến thuật và cách xử lý tình huống."
+        }
+      ]
+    },
+    {
+      "tag": "dang_ky_lop_hoc_mien_phi",
+      "patterns": [
+        "Đăng ký lớp học miễn phí",
+        "Làm thế nào để đăng ký học?",
+        "Tôi muốn học golf miễn phí",
+        "Thông tin lớp học golf miễn phí"
+      ],
+      "responses": [
+        {
+          "question": "Làm thế nào để đăng ký lớp học golf miễn phí?",
+          "answer": "Hiểu được tầm quan trọng của việc học đúng kỹ thuật, chúng tôi muốn dành tặng bạn cơ hội trải nghiệm một buổi học golf hoàn toàn MIỄN PHÍ cùng các huấn luyện viên chuyên nghiệp. Đây là cơ hội tuyệt vời để bạn làm quen với kỹ thuật cơ bản, được chuyên gia chỉnh sửa động tác và giải đáp mọi thắc mắc. \n\n➡️ **ĐĂNG KÝ NGAY LỚP DẠY GOLF MIỄN PHÍ CỦA CHÚNG TÔI TẠI ĐÂY: [Link đăng ký của bạn]**"
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,8 @@
 import { RevealOnScroll } from "../utils/RevealOnScroll";
 import {Navbar} from "../sections/Navbar"
-import GolfNew from "../sections/GolfNew";
 import { RegisterForm } from "../sections/RegisterForm";
 
-export const Home = () => {
+export const Register = () => {
   return (
     <section
       id="home"
@@ -11,7 +10,7 @@ export const Home = () => {
     >
       <RevealOnScroll>
         <Navbar />
-        <GolfNew />
+        <RegisterForm />
       </RevealOnScroll>
     </section>
   );

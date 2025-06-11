@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import NewItem from "../sections/NewItem";
+import NewItem from "./NewItem";
 import Airtable from 'airtable';
 
 const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY
