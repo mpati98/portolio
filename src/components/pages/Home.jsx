@@ -1,6 +1,6 @@
 import { RevealOnScroll } from "../utils/RevealOnScroll";
 import { Navbar } from "../sections/Navbar";
-import GolfDailyNew from "../sections/GolfDailyNew";
+import GolfDailyNews from "../sections/GolfDailyNews"
 import { useState } from "react";
 import { LoadingScreen } from "../utils/LoadingScreen";
 
@@ -21,7 +21,7 @@ export const Home = () => {
       )}{" "}
       <RevealOnScroll>
         <Navbar />
-        <GolfDailyNew />
+        <GolfDailyNews />
       </RevealOnScroll>
     </section>
   );

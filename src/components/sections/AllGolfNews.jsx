@@ -9,7 +9,7 @@ const AIRTABLE_TABLE_NAME = 'News';
 
 const base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
 
-const GolfDailyNews = () => {
+const AllGolfNews = () => {
     const [records, setRecords] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -46,10 +46,10 @@ const GolfDailyNews = () => {
     <div>
         <h2 className="text-center">Golf <span className="badge bg-danger">News</span></h2>
         {records.map((news, index) =>{
-            return <NewItem key={index} title={news.fields.Title} description = {news.fields.Content} src={news.fields.Cover[0]['url']} url={news.fields.SourceUrl} />
+            return <NewItem key={index} title={news.fields.Title} description = {news.fields.Description} src={news.fields.ImgUrl} url={news.fields.Url} />
         })}
     </div>
   )
 }
 
-export default GolfDailyNews
+export default AllGolfNews

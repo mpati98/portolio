@@ -46,7 +46,7 @@ const GolfDailyNews = () => {
     <div>
         <h2 className="text-center">Golf <span className="badge bg-danger">News</span></h2>
         {records.map((news, index) =>{
-            return <NewItem key={index} title={news.fields.Title} description = {news.fields.Content} src={news.fields.Cover[0]['url']} url={news.fields.SourceUrl} />
+            return <NewItem key={index} title={news.fields.Title} description = {news.fields.Description} src={news.fields.ImgUrl} url={news.fields.Url} />
         })}
     </div>
   )
