@@ -9,7 +9,7 @@ const AIRTABLE_TABLE_NAME = 'News';
 
 const base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
 
-const GolfNew = () => {
+const GolfDailyNews = () => {
     const [records, setRecords] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -21,7 +21,7 @@ const GolfNew = () => {
         // For example, to sort by a 'Name' field:
         // sort: [{ field: 'Name', direction: 'asc' }],
         // maxRecords: 10, // Limit the number of records
-        // view: 'Grid view' // Specify a particular view
+        view: 'Grid view' // Specify a particular view
       })
     .eachPage(
         function page(records, fetchNextPage) {
@@ -52,4 +52,4 @@ const GolfNew = () => {
   )
 }
 
-export default GolfNew
+export default GolfDailyNews

@@ -1,10 +1,10 @@
 import { RevealOnScroll } from "../utils/RevealOnScroll";
 import { Navbar } from "../sections/Navbar";
-import NewBoards from "../sections/NewBoards";
+import AllGolfNews from "../sections/AllGolfNews";
 import { useState } from "react";
 import { LoadingScreen } from "../utils/LoadingScreen";
 
-export const NewLatest = () => {
+export const News = () => {
   const [loading, setLoading] = useState(false);
   return (
     <section
@@ -21,7 +21,7 @@ export const NewLatest = () => {
       )}{" "}
       <RevealOnScroll>
         <Navbar />
-        <NewBoards />
+        <AllGolfNews />
       </RevealOnScroll>
     </section>
   );
