@@ -4,6 +4,7 @@ import "./index.css";
 import "./App.css";
 import { Home } from "./components/pages/Home.jsx";
 import { News } from "./components/pages/News.jsx";
+import { Shop } from "./components/pages/shop.jsx";
 import NotFoundPage from "./components/pages/NotFoundPage.jsx";
 import { Register } from "./components/pages/Register.jsx";
 import ChatBot from "react-chatbotify";
@@ -251,6 +252,7 @@ const flow = {
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="*" element={<NotFoundPage />} /> {/* Catch-all for 404 */}
       </Routes>
     </BrowserRouter>

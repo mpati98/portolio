@@ -1,6 +1,7 @@
 import { RevealOnScroll } from "../utils/RevealOnScroll";
 import {Navbar} from "../sections/Navbar"
 import { RegisterForm } from "../sections/RegisterForm";
+import { Footer } from "../sections/footer";
 
 export const Register = () => {
   return (
@@ -11,6 +12,7 @@ export const Register = () => {
       <RevealOnScroll>
         <Navbar />
         <RegisterForm />
+        <Footer />
       </RevealOnScroll>
     </section>
   );

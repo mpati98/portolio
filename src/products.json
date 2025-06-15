@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "image": "/Images/ball_v1.avif",
+        "description": "2025 Pro V1 gives you more opportunities to shoot lower scores with more speed off the tee, more control with your irons and more spin with your wedges.",
+        "name": "Pro V1",
+        "link": "https://www.titleist.com/product/pro-v1/005PV1T.html?dwvar_005PV1T_color=WHT#50-50CTA"
+    },
+    {
+        "id": 2,
+        "image": "/Images/ball_velocity.avif",
+        "description": "Offering full throttle speed for maximum distance, Velocity is for players who want distance above all else. ",
+        "name": "Velocity",
+        "link": "https://www.titleist.com/product/velocity/004VELT.html"
+    },
+    {
+        "id": 3,
+        "image": "/Images/club_gt2driver.avif",
+        "description": "Designed to produce consistently impressive distance with maximum forgiveness - no matter where you hit it - GT2 is built for players who don’t always find the center of the face and need the stability of a high-MOI driver without sacrificing speed.",
+        "name": "GT2 Driver",
+        "link": "https://www.titleist.com/product/gt2-driver/667C.html"
+    },
+    {
+        "id": 4,
+        "image": "/Images/club_gt2hybrid.avif",
+        "description": "For players looking for a higher-launching, more forgiving long-iron replacement, the GT2 Hybrid offers the ultimate combination of power and playability with heel-toe CG adjustability and the highest total inertia in this class of hybrids.",
+        "name": "GT2 Hybrid",
+        "link": "https://www.titleist.com/product/gt2-hybrid/675C.html"
+    },
+    {
+        "id": 5,
+        "image": "/Images/head.avif",
+        "description": "The Stars and Stripes Montauk Lightweight golf hat features USA-inspired details while maintaining an understated design. Constructed with lightweight materials and a classic standard curve bill, this traditional golf hat is the perfect option for players seeking a relaxed look.",
+        "name": "Stars & Stripes Montauk Lightweight",
+        "link": "https://www.titleist.com/product/stars-and-stripes-montauk-lightweight/25TSSML.html?dwvar_25TSSML_color=INDBLKMRB"
+    }
+
+]

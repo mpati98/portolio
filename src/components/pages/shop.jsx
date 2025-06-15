@@ -1,11 +1,11 @@
 import { RevealOnScroll } from "../utils/RevealOnScroll";
 import { Navbar } from "../sections/Navbar";
-import GolfDailyNews from "../sections/GolfDailyNews"
 import { useState } from "react";
 import { LoadingScreen } from "../utils/LoadingScreen";
+import ProductBoard from "../sections/productBoard";
 import { Footer } from "../sections/footer";
 
-export const Home = () => {
+export const Shop = () => {
   const [loading, setLoading] = useState(false);
   return (
     <section
@@ -22,8 +22,8 @@ export const Home = () => {
       )}{" "}
       <RevealOnScroll>
         <Navbar />
-        <GolfDailyNews />
-        <Footer />
+        <ProductBoard />
+        <Footer/>
       </RevealOnScroll>
     </section>
   );

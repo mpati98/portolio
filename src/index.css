@@ -9,6 +9,18 @@ body {
   color: #f3f4f6;
 }
 
+:root {
+  --primary-color: #0a0a0a;
+  --secondary-color: #1c117e;
+  --text-color: #111111;
+  --light-text: #888;
+  --black-color: #001;
+  --white-color: #fff;
+
+  --transition-slow: .6s;
+  --transition-regular: .3s;
+}
+
 @layer utilities {
   @keyframes blink {
     0%, 100%{

@@ -3,6 +3,7 @@ import { Navbar } from "../sections/Navbar";
 import AllGolfNews from "../sections/AllGolfNews";
 import { useState } from "react";
 import { LoadingScreen } from "../utils/LoadingScreen";
+import {Footer} from "../sections/footer"
 
 export const News = () => {
   const [loading, setLoading] = useState(false);
@@ -22,6 +23,7 @@ export const News = () => {
       <RevealOnScroll>
         <Navbar />
         <AllGolfNews />
+        <Footer />
       </RevealOnScroll>
     </section>
   );
