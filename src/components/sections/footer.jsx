@@ -21,16 +21,16 @@ export const Footer = () => {
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 className="text-uppercase mb-4 font-weight-bold">Products</h6>
               <p>
-                <a className="text-white">Home</a>
+                <a href="/" className="text-white">Home</a>
               </p>
               <p>
-                <a className="text-white">Latest News</a>
+                <a href="/news" className="text-white">Latest News</a>
               </p>
               <p>
-                <a className="text-white">Shop</a>
+                <a href="/shop" className="text-white">Shop</a>
               </p>
               <p>
-                <a className="text-white">Register</a>
+                <a href="/register" className="text-white">Register</a>
               </p>
             </div>
 
