@@ -52,7 +52,7 @@ const GetProduct = () => {
             key={index}
             name={product.fields.name}
             description={product.fields.description}
-            image={product.fields.image[0]["url"]}
+            image={product.fields.Image[0]["url"]}
             link={product.fields.link}
           />
         );
