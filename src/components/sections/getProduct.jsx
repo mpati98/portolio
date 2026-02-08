@@ -44,7 +44,7 @@ const GetProduct = () => {
   return (
     <div className="mt-16">
       <h2 className="text-center">
-        San pham <span className="badge bg-danger">Gom su</span>
+        Product <span className="badge bg-danger">Ceramic</span>
       </h2>
       {records.map((product, index) => {
         return (

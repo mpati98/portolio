@@ -47,7 +47,7 @@ export const Navbar = () => {
                   aria-current="page"
                   href="/sanphamkhac"
                 >
-                  San Pham Khac
+                  Other Products
                 </a>
               </li>
               <li className="nav-item">
