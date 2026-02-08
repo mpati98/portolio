@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import NewItem from "./NewItem";
+import ProductCard from "./productCard";
 import Airtable from "airtable";
 
-const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY;
-const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;
-const AIRTABLE_TABLE_NAME = "News";
+const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY_PRODUCT;
+const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID_PRODUCT;
+const AIRTABLE_TABLE_NAME = "SanPham";
 
 const base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
 
-const GolfDailyNews = () => {
+const GetProduct = () => {
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -20,7 +20,7 @@ const GolfDailyNews = () => {
         // For example, to sort by a 'Name' field:
         // sort: [{ field: 'Name', direction: 'asc' }],
         // maxRecords: 10, // Limit the number of records
-        view: "Daily new", // Specify a particular view
+        // view: 'Daily new' // Specify a particular view
       })
       .eachPage(
         function page(records, fetchNextPage) {
@@ -44,16 +44,16 @@ const GolfDailyNews = () => {
   return (
     <div className="mt-16">
       <h2 className="text-center">
-        Golf <span className="badge bg-danger">News</span>
+        San pham <span className="badge bg-danger">Gom su</span>
       </h2>
-      {records.map((news, index) => {
+      {records.map((product, index) => {
         return (
-          <NewItem
+          <ProductCard
             key={index}
-            title={news.fields.Title}
-            description={news.fields.Description}
-            src={news.fields.ImgUrl}
-            url={news.fields.Url}
+            name={product.fields.Name}
+            description={product.fields.Descriptions}
+            image={product.fields.Image[0]["url"]}
+            link={product.fields.Link}
           />
         );
       })}
@@ -61,4 +61,4 @@ const GolfDailyNews = () => {
   );
 };
 
-export default GolfDailyNews;
+export default GetProduct;

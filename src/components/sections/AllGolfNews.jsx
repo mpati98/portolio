@@ -1,29 +1,28 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import NewItem from "./NewItem";
-import Airtable from 'airtable';
+import Airtable from "airtable";
 
-const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY
-const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID
-const AIRTABLE_TABLE_NAME = 'News'; 
-
+const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY;
+const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;
+const AIRTABLE_TABLE_NAME = "News";
 
 const base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
 
 const AllGolfNews = () => {
-    const [records, setRecords] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+  const [records, setRecords] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        base(AIRTABLE_TABLE_NAME)
-        .select({
+  useEffect(() => {
+    base(AIRTABLE_TABLE_NAME)
+      .select({
         // Optional: specify fields, sorting, filtering, etc.
         // For example, to sort by a 'Name' field:
         // sort: [{ field: 'Name', direction: 'asc' }],
         // maxRecords: 10, // Limit the number of records
-        view: 'Grid view' // Specify a particular view
+        view: "Grid view", // Specify a particular view
       })
-    .eachPage(
+      .eachPage(
         function page(records, fetchNextPage) {
           // This function will be called for each page of records.
           setRecords((prevRecords) => [...prevRecords, ...records]);
@@ -35,7 +34,7 @@ const AllGolfNews = () => {
             setError(err);
           }
           setLoading(false);
-        }
+        },
       );
   }, []); // Empty dependency array means this effect runs once on component mount
 
@@ -43,13 +42,23 @@ const AllGolfNews = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div>
-        <h2 className="text-center">Golf <span className="badge bg-danger">News</span></h2>
-        {records.map((news, index) =>{
-            return <NewItem key={index} title={news.fields.Title} description = {news.fields.Description} src={news.fields.ImgUrl} url={news.fields.Url} />
-        })}
+    <div className="mt-16">
+      <h2 className="text-center">
+        Golf <span className="badge bg-danger">News</span>
+      </h2>
+      {records.map((news, index) => {
+        return (
+          <NewItem
+            key={index}
+            title={news.fields.Title}
+            description={news.fields.Description}
+            src={news.fields.ImgUrl}
+            url={news.fields.Url}
+          />
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default AllGolfNews
+export default AllGolfNews;

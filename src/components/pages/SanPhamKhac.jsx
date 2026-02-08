@@ -1,11 +1,11 @@
 import { RevealOnScroll } from "../utils/RevealOnScroll";
 import { Navbar } from "../sections/Navbar";
-import AllGolfNews from "../sections/AllGolfNews";
 import { useState } from "react";
 import { LoadingScreen } from "../utils/LoadingScreen";
+import GetProduct from "../sections/getProduct";
 import { Footer } from "../sections/footer";
 
-export const Home = () => {
+export const SanPhamKhac = () => {
   const [loading, setLoading] = useState(false);
   return (
     <section
@@ -22,7 +22,7 @@ export const Home = () => {
       )}{" "}
       <RevealOnScroll>
         <Navbar />
-        <AllGolfNews />
+        <GetProduct />
         <Footer />
       </RevealOnScroll>
     </section>

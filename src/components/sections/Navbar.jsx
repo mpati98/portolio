@@ -42,7 +42,20 @@ export const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/register">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  href="/sanphamkhac"
+                >
+                  San Pham Khac
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  href="/register"
+                >
                   Register
                 </a>
               </li>
