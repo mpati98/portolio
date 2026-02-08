@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import ProductCard from "./productCard";
 import Airtable from "airtable";
 
-const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY_PRODUCT;
-const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID_PRODUCT;
-const AIRTABLE_TABLE_NAME = "SanPham";
+const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY;
+const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;
+const AIRTABLE_TABLE_NAME = "Ceramics";
 
 const base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
 
@@ -50,10 +50,10 @@ const GetProduct = () => {
         return (
           <ProductCard
             key={index}
-            name={product.fields.Name}
-            description={product.fields.Descriptions}
-            image={product.fields.Image[0]["url"]}
-            link={product.fields.Link}
+            name={product.fields.name}
+            description={product.fields.description}
+            image={product.fields.image[0]["url"]}
+            link={product.fields.link}
           />
         );
       })}
